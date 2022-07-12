@@ -421,14 +421,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run {input, parameters}
-	do shell script "/bin/mkdir -p ~/xld_temp"
-	repeat with thisFile in input
-		# do shell script "echo " &amp; (POSIX path of thisFile as string) &amp; " &amp;&amp; exit 5"
-		do shell script "/opt/homebrew/bin/xld -o ~/xld_temp \"" &amp; (POSIX path of thisFile as string as string) &amp; "\" -f aac"
-	end repeat
-	return input
-end run</string>
+					<string>on run {input, parameters}	do shell script "/bin/mkdir -p ~/xld_temp"	repeat with thisFile in input		# do shell script "echo " &amp; (POSIX path of thisFile as string) &amp; " &amp;&amp; exit 5"		do shell script "/opt/homebrew/bin/xld -o ~/xld_temp \"" &amp; (POSIX path of thisFile as string as string) &amp; "\" -f aac"	end repeat	return inputend run</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
